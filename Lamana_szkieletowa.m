@@ -40,6 +40,7 @@ function [new_low,new_upp] = Lamana_szkieletowa(low,upp)
         for i = 1:N
             d(i) = (new_upp(j,i) - new_low(j,i))/2;
         end
+        d = sort(d);
     end
     
     %%% do testow
@@ -49,14 +50,14 @@ function [new_low,new_upp] = Lamana_szkieletowa(low,upp)
 %     plot(plot_data(:,1),plot_data(:,2))
 
     % trzy kryteria
-%     figure
-%     plot_data = [low; new_low; flip(new_upp); upp];
-%     subplot(311)
-%     plot(plot_data(:,1),plot_data(:,2))
-%     subplot(312)
-%     plot(plot_data(:,1),plot_data(:,3))
-%     subplot(313)
-%     plot(plot_data(:,2),plot_data(:,3))
+%      figure
+%      plot_data = [low; new_low; flip(new_upp); upp];
+%      subplot(311)
+%      plot(plot_data(:,1),plot_data(:,2))
+%      subplot(312)
+%      plot(plot_data(:,1),plot_data(:,3))
+%      subplot(313)
+%      plot(plot_data(:,2),plot_data(:,3))
 
 
 end
